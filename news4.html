@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>数字一张图</title>
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+    <!-- header头部：logo和导航栏 -->
+    <div class="header">
+        <div class="headercontent">
+            <div class="logo">
+                <img src="images/schoollogo.jpg" alt="" class="schoollogo">
+            </div>
+            <div class="placelink">
+                <ul>
+                    <li>
+                        <a href="index.html">首页</a>
+                    </li>
+                    <li>
+                        <a href="news3.html">张家界</a>
+                    </li>
+                    <li>
+                        <a href="news4.html">湘西</a>
+                    </li>
+                    <li>
+                        <a href="news5.html">怀化</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 轮播图 -->
+    <div class="slideshow">
+        <!-- Swiper -->
+        <div class="swiper-container">
+            <div class="destitle">
+                <h1>湘西州博物馆</h1>
+            </div>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img data-src="images/place4/slide1.jpg" data-srcset="images/place4/slide1.jpg 2x" class="swiper-lazy">
+                    <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                    <img data-src="images/place4/slide2.jpg" data-srcset="images/place4/slide2.jpg 2x" class="swiper-lazy">
+                    <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                    <img data-src="images/place4/slide3.jpg" data-srcset="images/place4/slide3.jpg 2x" class="swiper-lazy">
+                    <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                    <img data-src="images/place4/slide4.jpg" data-srcset="images/place4/slide4.jpg 2x" class="swiper-lazy">
+                    <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                    <img data-src="images/place4/slide5.jpg" data-srcset="images/place4/slide5.jpg 2x" class="swiper-lazy">
+                    <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                    <img data-src="images/place4/slide6.jpg" data-srcset="images/place4/slide6.jpg 2x" class="swiper-lazy">
+                    <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                    <img data-src="images/place4/slide7.jpg" data-srcset="images/place4/slide7.jpg 2x" class="swiper-lazy">
+                    <div class="swiper-lazy-preloader"></div>
+                </div>
+            </div>
+            <!-- <div class="swiper-pagination"></div> -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            speed: 700,
+            allowTouchMove: false,
+            lazy: {
+                loadPrevNext: true,
+                loadPrevNextAmount: 3,
+            },
+            centeredSlides: true,
+            spaceBetween: 50,
+            slidesOffsetBefore: 40,
+            loop: true,
+            slidesPerView: 'auto',
+            on: {
+                slideChangeTransitionEnd: function() {
+                    this.slides.transition(this.params.autoplay.delay + this.params.speed).transform('translate3d(-60px, 0, 0)');
+                },
+                slideChangeTransitionStart: function() {
+                    this.slides.transition(this.params.speed).transform('translate3d(0, 0, 0)');
+                },
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+        window.onresize = function() {
+            swiper.update();
+        }
+    </script>
+
+    <!-- content -->
+    <div class="content">
+        <div class="blogcontent">
+            <div class="blogpic">
+                <img src="images/place4/display.jpg" />
+            </div>
+            <p class="jianjie" style="margin-top: 12px;">
+                <b>简介：</b>湘西土家族苗族自治州博物馆创建于1957年11月1日，是湖南省成立最早的地方综合性重点博物馆，也是迄今为止湖南省唯一的一个少数民族地区级博物馆。坐落在吉首市;占地面积60亩;总建筑面积约6800平方米。馆舍按照中国传统建筑风格设计建造，主体建筑由湘西民俗风情馆、湘西剿匪胜利纪念馆等组成，两馆皆为仿古四合院式琉璃瓦建筑。数十亩之境，依山势而建，飞檐翘角，高阁凌空，重檐叠翠；树木葱郁，鸟语花香，环境幽雅。
+            </p>
+            <div class="blogtext">
+                <a href="#">
+                    <h3 style="font-size: 37px; line-height: 1.5;">湘西州博物馆 </h3>
+                </a>
+                <div class="info">2021年7月17日<a href="#">于湘西</a></div>
+                <h4>铮铮铁骨，血性湘西</h4>
+                <p>7月17日，计通学院赴潇湘红色文化区域数字一张图开发专业实践团和带队老师易亭亭依，我们抵达了湘西州博物馆。其中《血性湘西》的展厅展览分为辛亥革命、红色苏区、抗战烽火、解放湘西四个部分。</p>
+                <h4>辛亥革命</h4>
+                <p>1911年10月，凤凰人安定超在长沙率领新军49标起义，中国同盟会成员田应全、唐世钧、沈宗嗣积极响应，一批湘西革命先驱打响了湘西辛亥革命的第一枪，并光复了凤凰县城。</p>
+                <h4>红色苏区</h4>
+                <p>1927年秋到1934年秋，在中国革命处于最为艰难的时刻，湘鄂西人民在贺龙、周逸群、关向应等同志的直接领导下，高举土地革命和武装反抗国民党反动派的旗帜，进行了英勇的斗争，建立了红军队伍，创建了湘鄂西苏区红色根据地，为中国革命作出了重大贡献。</p>
+                <h4>抗战烽火</h4>
+                <p>湘西抗战是一种全方位的抗战，它既有湘西子弟上阵杀敌的雄姿英发，如一二零师、一二八师、龙山兵营血战沙场，与日寇浴血奋战。特别是抗日战争时期，以湘西龙山籍官兵为主的国民革命军128师参加淞沪会战，日军为了截断沪杭铁路和苏嘉铁路，封堵上海守军的退路，日军第18师团从金山直驱嘉善，国民党第10集团军总司令刘建绪，调集109师、128师等部队官兵15570余人，从11月8日到14日，在枫泾至嘉善一线阻击日军进犯。近身白刃肉搏，血战七天七夜，中国军队以落后装备和血肉之躯，在以飞机大炮疯狂进犯的敌人面前筑起一道铁血幕墙。湘西人民也在共产党的领导下，积极从事抗日救亡活动，掀起阵阵抗日热潮。在十四年抗战中，湘西人民战不分前方后方，人不分男女老幼，同仇敌忾，军民一心，为捍卫祖国的神圣领土，捍卫中华民族的尊严，作出了巨大的牺牲和贡献。</p>
+                <img src="images/place4/inside1.jpg" alt="">
+                <h4>解放湘西</h4>
+                <p>1949年，蒋介石为阻挡人民解放军南下，收编湘西各路武装，并大量安插匪特，企图建立湘西“反共基地”。1949年9月中旬，中国人民解放军带领湘西人民先后解放了沅陵等十余座县城，率部队剿匪，到1951年2月止，共歼国民党武装和土匪与地方游杂武装92000多人，彻底根除了湘西匪患，解放了湘西。</p>
+                <img src="images/place4/inside3.jpg" alt="">
+                <p> 战火硝烟已经消失在中华民族的大地上，但铭刻在15亿人民的心坎上。它犹如一方高耸入云的丰碑，将永远激励中华人民缅怀烈士的英灵，沿着烈士们的足迹大踏步向前，向前……</p>
+            </div>
+        </div>
+        <div class="navcontent">
+            <div class="ncheader">
+                <h5>新闻推荐</h5>
+            </div>
+            <div class="nccontent">
+                <div class="post">
+                    <a href="news1.html"><img src="images/place1/min.png" /></a>
+                    <div class="ncright">
+                        <h5><a href="news1.html">桑植</a></h5>
+                        <span>2021年7月14日</span>
+                    </div>
+                </div>
+            </div>
+            <div class="nccontent">
+                <div class="post">
+                    <a href="news6.html"><img src="images/place6/min.png" /></a>
+                    <div class="ncright">
+                        <h5><a href="news6.html">老兵专访</a></h5>
+                        <span>2021年7月15日</span>
+                    </div>
+                </div>
+            </div>
+            <div class="nccontent">
+                <div class="post">
+                    <a href="news2.html"><img src="images/place2/min.png" /></a>
+                    <div class="ncright">
+                        <h5><a href="news2.html">贺龙纪念馆</a></h5>
+                        <span>2021年7月15日</span>
+                    </div>
+                </div>
+            </div>
+            <div class="nccontent">
+                <div class="post">
+                    <a href="news3.html"><img src="images/place3/min.png" /></a>
+                    <div class="ncright">
+                        <h5><a href="news3.html">湘鄂川黔</a></h5>
+                        <span>2021年7月16日</span>
+                    </div>
+                </div>
+            </div>
+            <div class="nccontent">
+                <div class="post">
+                    <a href="news5.html"><img src="images/place5/min.png" /></a>
+                    <div class="ncright">
+                        <h5><a href="news5.html">芷江</a></h5>
+                        <span>2021年7月19日</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <!-- <div class="footer">
+        <div class="footercontent">
+
+        </div>
+    </div> -->
+</body>
+
+</html>

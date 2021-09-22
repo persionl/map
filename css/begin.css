@@ -1,0 +1,32 @@
+.div {
+    text-align: center;
+}
+
+.img {
+    height: 300px;
+    width: auto;
+    margin-top: 100px;
+}
+
+html:hover .img {
+    animation-name: img;
+    animation-delay: 200ms;
+    animation-duration: 3s;
+}
+
+p {
+    font-family: "微软雅黑";
+    height: 100px;
+    height: auto;
+    font-size: 60px;
+    text-shadow: 15px 15px 20px #b0b0b0;
+}
+
+@keyframes img {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
